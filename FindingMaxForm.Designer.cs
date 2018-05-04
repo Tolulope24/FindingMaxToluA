@@ -1,6 +1,6 @@
 ﻿namespace FindingMaxToluA
 {
-    partial class Form1
+    partial class FindingMaxForm
     {
         /// <summary>
         /// Required designer variable.
