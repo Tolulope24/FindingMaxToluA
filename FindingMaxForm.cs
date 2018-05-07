@@ -10,11 +10,40 @@ using System.Windows.Forms;
 
 namespace FindingMaxToluA
 {
-    public partial class FindingMaxForm : Form
+    public partial class frmFindingMax : Form
     {
-        public FindingMaxForm()
+       
+        public frmFindingMax()
         {
             InitializeComponent();
+        }
+
+        private void FindingMaxForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            // declare local variables and constants
+            const int MAX_ARRAY_SIZE = 10;
+            const int MAX_RANDOM_NUMBER = 500;
+            int[] arrayOfNumbers = new int[MAX_ARRAY_SIZE];
+            int counter, randomNumber, maxValue;
+
+
+
+
+            // get Max value in the array
+            maxValue = GetMaxValue(arrayOfintegers);
+            // Display the max value in the label
+            this.lblAnswer.Text = "The Max Value is: " + maxValue];
+
         }
     }
 }
