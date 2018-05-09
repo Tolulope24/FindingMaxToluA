@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnStart = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstArrayNumbers = new System.Windows.Forms.ListBox();
             this.lblAnswer = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,14 +44,14 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // listBox1
+            // lstArrayNumbers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(45, 86);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(136, 225);
-            this.listBox1.TabIndex = 1;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstArrayNumbers.FormattingEnabled = true;
+            this.lstArrayNumbers.Location = new System.Drawing.Point(45, 86);
+            this.lstArrayNumbers.Name = "lstArrayNumbers";
+            this.lstArrayNumbers.Size = new System.Drawing.Size(136, 225);
+            this.lstArrayNumbers.TabIndex = 1;
+            this.lstArrayNumbers.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // lblAnswer
             // 
@@ -77,7 +77,7 @@
             this.ClientSize = new System.Drawing.Size(233, 365);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lblAnswer);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstArrayNumbers);
             this.Controls.Add(this.btnStart);
             this.Name = "frmFindingMax";
             this.Text = "Finding Max";
@@ -90,7 +90,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstArrayNumbers;
         private System.Windows.Forms.Label lblAnswer;
         private System.Windows.Forms.Button btnCalculate;
     }
