@@ -12,11 +12,72 @@ namespace FindingMaxToluA
 {
     public partial class frmFindingMax : Form
     {
-       
+ /*
+  * Created by: Tolu Adebayo
+  * Created on: 15-June-2018
+  * Created for: ICS3U Programming
+  * Daily Assignment – Day #37 - Find Max Value
+  * This program checks the max Value of a list of numbers
+ */
+
         public frmFindingMax()
         {
             InitializeComponent();
         }
+
+        // set MAX_ARRAY_SIZE to public
+        const int MAX_ARRAY_SIZE = 10;
+
+        private int GetMaxValue(int[] arrayOfNumbers)
+        {
+            // identify variables
+            int tmpmaxValue = -1;
+            int currentValue;
+
+
+            for (int counter = 0; counter < MAX_ARRAY_SIZE; counter++)
+            {
+                currentValue = arrayOfNumbers[counter];
+
+                if (tmpmaxValue < currentValue)
+                {
+                    tmpmaxValue = currentValue;
+                }
+            }
+
+            // Return maxValue
+            return tmpmaxValue;
+
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            
+            const int MAX_RANDOM_NUMBER = 500;
+            int[] arrayOfIntegers = new int[MAX_ARRAY_SIZE];
+            int counter, randomNumber, maxValue;
+            Random randomNumberGenerator = new Random();
+
+           
+            for (counter = 0; counter < arrayOfIntegers.Length; counter ++)
+            {
+                // Generate Random Number
+                randomNumber = randomNumberGenerator.Next(1, MAX_RANDOM_NUMBER + 1);
+                // assign the random number to the cell
+                arrayOfIntegers[counter] = randomNumber;
+                // add random numbers to the lost box
+                this.lstArrayNumbers.Items.Add(randomNumber);
+            }
+           
+
+            // get Max value in the array
+            maxValue = GetMaxValue(arrayOfIntegers);
+            // Display the max value in the label
+            this.lblAnswer.Text = "The Max Value is: " + maxValue;
+
+        }
+
+     
 
         private void FindingMaxForm_Load(object sender, EventArgs e)
         {
@@ -28,43 +89,6 @@ namespace FindingMaxToluA
 
         }
 
-        private int GetMaxValue(int[] arrayOfNumbers)
-        {
 
-            return
-
-        }
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            // declare local variables and constants
-            const int MAX_ARRAY_SIZE = 10;
-            const int MAX_RANDOM_NUMBER = 500;
-            int[] arrayOfIntegers = new int[MAX_ARRAY_SIZE];
-            int counter, randomNumber, maxValue;
-            Random randomNumberGenerator = new Random();
-
-            // Generate Random Number
-            randomNumber = randomNumberGenerator.Next(1, MAX_RANDOM_NUMBER + 1);
-           
-            for (counter = 0; counter < arrayOfIntegers.Length; counter ++)
-            {
-                // assign the random number to the cell
-                arrayOfIntegers[counter] = randomNumber;
-                // add random numbers to the lost box
-                this.lstArrayNumbers.Items.Add(randomNumber);
-            }
-             if ( MAX_ARRAY_SIZE < MAX_RANDOM_NUMBER )
-             {
-                maxValue = 
-
-             }
-
-            // get Max value in the array
-            maxValue = GetMaxValue(arrayOfIntegers);
-            // Display the max value in the label
-            this.lblAnswer.Text = "The Max Value is: " + maxValue;
-
-        }
     }
 }

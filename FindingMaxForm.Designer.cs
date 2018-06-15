@@ -31,7 +31,6 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lstArrayNumbers = new System.Windows.Forms.ListBox();
             this.lblAnswer = new System.Windows.Forms.Label();
-            this.btnCalculate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
@@ -56,26 +55,16 @@
             // lblAnswer
             // 
             this.lblAnswer.AutoSize = true;
-            this.lblAnswer.Location = new System.Drawing.Point(116, 330);
+            this.lblAnswer.Location = new System.Drawing.Point(42, 327);
             this.lblAnswer.Name = "lblAnswer";
             this.lblAnswer.Size = new System.Drawing.Size(0, 13);
             this.lblAnswer.TabIndex = 2;
-            // 
-            // btnCalculate
-            // 
-            this.btnCalculate.Location = new System.Drawing.Point(12, 330);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
-            this.btnCalculate.TabIndex = 3;
-            this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = true;
             // 
             // frmFindingMax
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(233, 365);
-            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.lstArrayNumbers);
             this.Controls.Add(this.btnStart);
@@ -92,7 +81,6 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.ListBox lstArrayNumbers;
         private System.Windows.Forms.Label lblAnswer;
-        private System.Windows.Forms.Button btnCalculate;
     }
 }
 
